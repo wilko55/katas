@@ -1,36 +1,37 @@
 var assert = require("chai").assert;
 var isogramChecker = require("./index.js").isogramChecker;
+var checkAWord = require("./index.js").checkAWord;
 
 
 describe('The isogram checker', function () {
 
   it('should check that isogramChecker returns true if a string is passed in', function () {
-    var a = isogramChecker("test");
+    var a = checkAWord("test");
     assert.isTrue(a);
   });
 
   it('should check that isogramChecker returns true if the string "a" is passed in', function () {
-    var a = isogramChecker("a");
+    var a = checkAWord("a");
     assert.isTrue(a);
   });
 
   it('should check that isogramChecker returns false if the string "aa" is passed in', function () {
-    var a = isogramChecker("aa");
+    var a = checkAWord("aa");
     assert.isFalse(a);
   });
 
   it('should check that isogramChecker returns false if the string "zoo" is passed in', function () {
-    var a = isogramChecker("zoo");
+    var a = checkAWord("zoo");
     assert.isFalse(a);
   });
 
   it('should check that isogramChecker returns true if the string "qwerty" is passed in', function () {
-    var a = isogramChecker("qwerty");
+    var a = checkAWord("qwerty");
     assert.isTrue(a);
   });
 
   it('should check that isogramChecker returns false if the string "!!!" is passed in', function () {
-    var a = isogramChecker("!!!");
+    var a = checkAWord("!!!");
     assert.isFalse(a);
   });
 
